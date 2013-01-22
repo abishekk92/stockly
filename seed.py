@@ -4,4 +4,7 @@ from BeautifulSoup import BeautifulSoup
 
 base_url="http://in.finance.yahoo.com/q/hp?s=INFY.BO"
 html_page=urlib.urlopen(base_url)
-print html_page.read()
+html_document=BeautifulSoup(html_page)
+for url in html_document('a',rel="next"):
+	write_url(url)
+
