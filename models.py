@@ -3,9 +3,9 @@ from mongoengine import *
 connect('stockly')
 
 class Url(Document):
-	urls=ListFiled(URLField())
+	urls=ListField(URLField())
 
-class Index(DynamicDocument):
-	indexes=DictField()
+class Index(Document):
+	indexes=ListField(DictField(field=MapField(field=StringField())))
 
 
