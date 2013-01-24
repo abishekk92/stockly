@@ -6,5 +6,6 @@ class Url(Document):
 	urls=ListFiled(URLField())
 
 class Index(DynamicDocument):
-	
+	indexes=DictField()
+
 
