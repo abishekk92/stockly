@@ -1,2 +1,3 @@
 BeautifulSoup==3.2.1
 MongoEngine==0.7.9
+pyhash>=0.4
