@@ -6,7 +6,7 @@ class Urls(Document):
 	url=URLField(unique=True)
 
 class Index(Document):
-	date=DateTimeField()
+	date=DateTimeField(unique=True)
 	open_price=FloatField()
 	day_high=FloatField()
 	day_low=FloatField()
