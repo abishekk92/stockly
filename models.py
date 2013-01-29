@@ -3,13 +3,19 @@ from mongoengine import *
 connect('stockly')
 
 class Urls(Document):
-	url=URLField()
+	url=URLField(unique=True)
 
 class Index(Document):
-	indexes=ListField(DictField(field=MapField(field=StringField())))
+	date=DateTimeField()
+	open_price=FloatField()
+	day_high=FloatField()
+	day_low=FloatField()
+	close_price=FloatField()
+	adj_close=FloatField()
+	volume=IntField()
 
 class Html_dump(Document):
-	url = ReferenceField(Urls)
+	url = ReferenceField(Urls,dbref=True)
 	html_dump=DynamicField()
 
 
