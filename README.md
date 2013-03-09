@@ -2,6 +2,8 @@ Stockly
 =======
 Predictive modelling of BSE using Machine Learning.
 
-Dependencies:
+__Dependencies__
 
-pip install -r requirements.txt
+```bash
+	pip install -r requirements.txt
+```
