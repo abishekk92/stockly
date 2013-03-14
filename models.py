@@ -1,6 +1,6 @@
 from mongoengine import *
 
-connect('stockly')
+connect('stockly-test')
 
 class Index(EmbeddedDocument):
 	date=DateTimeField()
